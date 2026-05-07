@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semana da Liberação Miofascial Sem Sofrimento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #1a1a2e;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; }
+
+    /* ── URGENCY BAR ── */
+    .urgency-bar {
+      background: #7f1d1d;
+      color: #fff;
+      text-align: center;
+      padding: 14px 20px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .urgency-bar p { margin-bottom: 10px; }
+
+    .progress-wrap {
+      max-width: 360px;
+      margin: 0 auto;
+      background: #991b1b;
+      border-radius: 100px;
+      height: 14px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 73%;
+      height: 100%;
+      background: linear-gradient(90deg, #fca5a5, #f87171);
+      border-radius: 100px;
+      position: relative;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      max-width: 360px;
+      margin: 6px auto 0;
+      font-size: 11px;
+      color: #fecaca;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, #0b1739 0%, #1e3a8a 100%);
+      color: #fff;
+      text-align: center;
+      padding: 64px 20px 72px;
+    }
+
+    .hero-label {
+      display: inline-block;
+      background: rgba(251,191,36,0.15);
+      border: 1px solid #fbbf24;
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5.5vw, 56px);
+      font-weight: 900;
+      line-height: 1.12;
+      max-width: 820px;
+      margin: 0 auto 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 .accent { color: #fbbf24; }
+
+    .hero .sub {
+      font-size: clamp(14px, 2.2vw, 17px);
+      max-width: 680px;
+      margin: 0 auto 36px;
+      color: #bfdbfe;
+      line-height: 1.75;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #f97316, #ea580c);
+      color: #fff;
+      font-size: clamp(15px, 2.5vw, 18px);
+      font-weight: 800;
+      padding: 20px 52px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      box-shadow: 0 6px 28px rgba(249,115,22,0.5);
+      transition: transform 0.18s, box-shadow 0.18s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(249,115,22,0.6);
+    }
+
+    .secure {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #93c5fd;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 8px 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 28px;
+      font-size: 14px;
+      color: #bfdbfe;
+    }
+
+    .hero-meta span { display: flex; align-items: center; gap: 6px; }
+
+    .social-proof {
+      display: inline-block;
+      margin-top: 28px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      padding: 12px 28px;
+      font-size: 14px;
+      color: #e0f2fe;
+      font-weight: 500;
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 72px 20px; }
+
+    .container { max-width: 800px; margin: 0 auto; }
+
+    .section-title {
+      font-size: clamp(22px, 4vw, 38px);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 36px;
+      color: #0f1c3f;
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+    }
+
+    /* ── DOBRA 2 — IDENTIFICAÇÃO ── */
+    .identificacao { background: #f8fafc; }
+
+    .id-lead {
+      font-size: clamp(18px, 3vw, 22px);
+      font-weight: 700;
+      color: #0f1c3f;
+      margin-bottom: 28px;
+    }
+
+    .scenario {
+      background: #fff;
+      border-left: 4px solid #1e40af;
+      padding: 18px 22px;
+      margin-bottom: 14px;
+      border-radius: 0 10px 10px 0;
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.75;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .id-conclusion {
+      margin-top: 28px;
+      padding: 22px 26px;
+      background: #eff6ff;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #1e40af;
+      font-weight: 600;
+      line-height: 1.65;
+    }
+
+    /* ── DOBRA 3 — CULPA ── */
+    .culpa {
+      background: #0f1c3f;
+      color: #fff;
+    }
+
+    .culpa .section-title { color: #fbbf24; }
+
+    .culpa p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #bfdbfe;
+      margin-bottom: 18px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .culpa .punch {
+      font-size: clamp(18px, 3vw, 22px);
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      margin-top: 32px;
+      background: rgba(251,191,36,0.12);
+      border: 1px solid rgba(251,191,36,0.3);
+      border-radius: 10px;
+      padding: 20px 28px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── DOBRA 4 — FUTURE PACING ── */
+    .future { background: #fff; }
+
+    .future-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .future-icon {
+      width: 34px;
+      height: 34px;
+      background: #10b981;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 16px;
+      color: #fff;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .future-item p {
+      font-size: 16px;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .future-close {
+      margin-top: 28px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f1c3f;
+      text-align: center;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 18px 24px;
+    }
+
+    /* ── DOBRA 5 — MECANISMO ── */
+    .mecanismo { background: #eff6ff; }
+
+    .mecanismo p {
+      font-size: 16px;
+      color: #374151;
+      line-height: 1.85;
+      margin-bottom: 18px;
+    }
+
+    .mec-box {
+      background: #0f1c3f;
+      color: #fff;
+      padding: 28px 36px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 800;
+      margin-top: 32px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── DOBRA 6 — AULAS ── */
+    .aulas {
+      background: #0b1739;
+      color: #fff;
+    }
+
+    .aulas .section-title { color: #fff; }
+
+    .aula-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 26px 28px;
+      margin-bottom: 14px;
+      transition: background 0.2s;
+    }
+
+    .aula-card:hover { background: rgba(255,255,255,0.09); }
+
+    .aula-tag {
+      display: inline-block;
+      background: #1e40af;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .aula-card h3 {
+      font-size: clamp(15px, 2.5vw, 18px);
+      font-weight: 700;
+      color: #fbbf24;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .aula-card p {
+      font-size: 14px;
+      color: #bfdbfe;
+      line-height: 1.7;
+    }
+
+    .bonus-card {
+      background: linear-gradient(135deg, #4c1d95, #3730a3);
+      border: 2px solid #a78bfa;
+      border-radius: 14px;
+      padding: 26px 28px;
+      margin-top: 10px;
+    }
+
+    .bonus-card .aula-tag {
+      background: #fbbf24;
+      color: #0f1c3f;
+    }
+
+    .bonus-card h3 { color: #fff; }
+
+    .bonus-card p { color: #ddd6fe; }
+
+    /* ── DOBRA 7 — PROVA SOCIAL ── */
+    .prova { background: #f8fafc; }
+
+    .depo-placeholder {
+      background: #fff;
+      border: 2px dashed #d1d5db;
+      border-radius: 12px;
+      padding: 48px 20px;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 14px;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .depo-placeholder strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+
+    /* ── DOBRA 8 — STACK ── */
+    .stack { background: #fff; }
+
+    .stack-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .stack-row:last-of-type { border-bottom: none; }
+
+    .stack-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f1c3f;
+    }
+
+    .stack-desc {
+      font-size: 13px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    .stack-value {
+      font-size: 15px;
+      font-weight: 800;
+      color: #10b981;
+      white-space: nowrap;
+    }
+
+    .stack-total-box {
+      background: #f0fdf4;
+      border: 2px solid #10b981;
+      border-radius: 10px;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .stack-total-box .label {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f1c3f;
+    }
+
+    .stack-total-box .val {
+      font-size: 22px;
+      font-weight: 900;
+      color: #10b981;
+    }
+
+    /* ── DOBRA 9 — PREÇO ── */
+    .preco {
+      background: linear-gradient(160deg, #0b1739, #1e3a8a);
+      text-align: center;
+      color: #fff;
+    }
+
+    .preco .section-title { color: #fff; }
+
+    .price-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 48px 36px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .price-old {
+      font-size: 20px;
+      color: #9ca3af;
+      text-decoration: line-through;
+      margin-bottom: 8px;
+    }
+
+    .price-new {
+      font-size: clamp(56px, 12vw, 80px);
+      font-weight: 900;
+      color: #fbbf24;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .price-context {
+      font-size: 15px;
+      color: #bfdbfe;
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+
+    /* ── DOBRA 10 — GARANTIA ── */
+    .garantia { background: #f0fdf4; }
+
+    .garantia-card {
+      background: #fff;
+      border: 3px solid #10b981;
+      border-radius: 20px;
+      padding: 48px 36px;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .garantia-icon {
+      font-size: 72px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .garantia-card h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0f1c3f;
+      margin-bottom: 16px;
+    }
+
+    .garantia-card p {
+      font-size: 16px;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    /* ── DOBRA 11 — RAFAEL ── */
+    .rafael { background: #fff; }
+
+    .rafael-grid {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 640px) {
+      .rafael-grid { grid-template-columns: 1fr; }
+    }
+
+    .rafael-photo {
+      background: #e5e7eb;
+      border-radius: 16px;
+      aspect-ratio: 3/4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+      font-size: 13px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .rafael-text h2 {
+      font-size: clamp(22px, 3.5vw, 30px);
+      font-weight: 800;
+      color: #0f1c3f;
+      margin-bottom: 22px;
+    }
+
+    .rafael-text p {
+      font-size: 16px;
+      color: #374151;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    .rafael-stats {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .stat {
+      background: #eff6ff;
+      border-radius: 10px;
+      padding: 14px 18px;
+      text-align: center;
+      flex: 1;
+      min-width: 80px;
+    }
+
+    .stat-num {
+      font-size: 22px;
+      font-weight: 900;
+      color: #1e40af;
+      display: block;
+    }
+
+    .stat-lbl {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+
+    /* ── DOBRA 12 — QUALIFICAÇÃO ── */
+    .qual { background: #f8fafc; }
+
+    .qual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .qual-grid { grid-template-columns: 1fr; }
+    }
+
+    .qual-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 30px 26px;
+    }
+
+    .qual-box.sim { border: 2px solid #10b981; }
+    .qual-box.nao { border: 2px solid #ef4444; }
+
+    .qual-box h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .qual-box.sim h3 { color: #10b981; }
+    .qual-box.nao h3 { color: #ef4444; }
+
+    .qual-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.65;
+    }
+
+    .qual-item .ico { flex-shrink: 0; margin-top: 1px; font-size: 16px; }
+
+    /* ── CTA FINAL ── */
+    .cta-final {
+      background: linear-gradient(160deg, #0b1739 0%, #1e3a8a 100%);
+      color: #fff;
+      text-align: center;
+      padding: 96px 20px;
+    }
+
+    .cta-final h2 {
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: -0.3px;
+    }
+
+    .cta-final p {
+      font-size: 16px;
+      color: #bfdbfe;
+      margin-bottom: 40px;
+      line-height: 1.8;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .event-chips {
+      display: flex;
+      gap: 10px 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      font-size: 14px;
+      color: #bfdbfe;
+    }
+
+    .event-chips span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .warning-final {
+      margin-top: 28px;
+      font-size: 14px;
+      color: #fca5a5;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       URGÊNCIA — 73% VAGAS ESGOTADAS
+  ══════════════════════════════════════ -->
+  <div class="urgency-bar">
+    <p>⚠️ ATENÇÃO: 73% das vagas já foram reservadas</p>
+    <div class="progress-wrap">
+      <div class="progress-fill"></div>
+    </div>
+    <div class="progress-label">
+      <span>0%</span>
+      <span style="font-weight:800;color:#fef2f2;">73% esgotado</span>
+      <span>100%</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-label">Evento ao vivo gratuito</div>
+
+      <h1>
+        Aprenda a tratar <span class="accent">14 dores</span> com<br />
+        Liberação Miofascial de Fáscia Profunda
+      </h1>
+
+      <p class="sub">
+        Cefaleia, bruxismo, torcicolo, lombalgia, ciatalgia, canelite, epicondilite,
+        fascite plantar e mais 6 dores usando Biomecânica e Neurofisiologia de fáscia
+        profunda, num método inédito no mercado
+      </p>
+
+      <a href="#inscricao" class="cta-btn">QUERO MINHA VAGA</a>
+      <p class="secure">🔒 Pagamento seguro Hotmart</p>
+
+      <div class="hero-meta">
+        <span>📅 18/05 a 22/05</span>
+        <span>🕖 Às 7h</span>
+        <span>📺 5 aulas ao vivo</span>
+        <span>🎁 Aula bônus domingo às 20h</span>
+      </div>
+
+      <div class="social-proof">
+        ⭐ +8.000 terapeutas formados em 7 países pelo Método LMS
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOBRA 2 — IDENTIFICAÇÃO
+  ══════════════════════════════════════ -->
+  <section class="identificacao">
+    <div class="container">
+      <p class="id-lead">Você é terapeuta. Sabe fazer liberação. Mas já viveu alguma dessas situações?</p>
+
+      <div class="scenario">
+        Paciente chega com dor de cabeça constante. Você trata a cervical, a lombar, faz o que sabe. Volta semana que vem com a mesma queixa. Você fica sem saber o que mudou.
+      </div>
+
+      <div class="scenario">
+        Paciente chega com ciatalgia. Você aplica a técnica que aprendeu. Ele melhora um pouco, some da agenda e não volta mais.
+      </div>
+
+      <div class="scenario">
+        Paciente com fascite plantar. Você sabe que é no pé. Mas depois de três sessões sem melhora significativa, não sabe mais por onde ir.
+      </div>
+
+      <div class="scenario">
+        Paciente chega com dor no trapézio e reclamando de "nózinhos" e contraturas. Você faz uma força enorme e ele se contorce de dor. Você se cansa demais e fáscia profunda não libera.
+      </div>
+
+      <div class="id-conclusion">
+        Você não fez nada errado. O problema é que ninguém te ensinou a origem real dessas dores e sem isso, qualquer técnica é tentativa no escuro.
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOBRA 3 — TRANSFERÊNCIA DE CULPA
+  ══════════════════════════════════════ -->
+  <section class="culpa">
+    <div class="container">
+      <h2 class="section-title">A culpa não é sua. É do que te ensinaram.</h2>
+      <p>A maioria dos cursos de liberação miofascial ensina catálogo de técnicas. Uma para lombar. Uma para cervical. Uma para o ombro.</p>
+      <p>O problema é que técnica sem avaliação é escolha aleatória.</p>
+      <p>Quando o paciente não melhora, você pensa que está fazendo errado. Que falta prática. Que precisa de mais um curso.</p>
+      <p>Mas o que falta não é mais técnica. O que falta é saber onde a dor se origina antes de colocar a mão no paciente. É isso que diferencia a terapeuta que resolve da terapeuta que tenta.</p>
+      <p>E é exatamente isso que essa semana vai te dar.</p>
+      <div class="punch">Sem adivinhar. Sem forçar. Sem se cansar para não ter resultado.</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOBRA 4 — FUTURE PACING
+  ══════════════════════════════════════ -->
+  <section class="future">
+    <div class="container">
+      <h2 class="section-title">Imagina como seria chegar na segunda da semana que vem e...</h2>
+
+      <div class="future-item">
+        <div class="future-icon">✓</div>
+        <p>Saber exatamente o que fazer quando a paciente diz que a dor de cabeça voltou depois de três dias.</p>
+      </div>
+
+      <div class="future-item">
+        <div class="future-icon">✓</div>
+        <p>Receber uma ciatalgia no consultório e já saber qual avaliação fazer antes de tocar a paciente, qual a sequência de técnicas e por que cada uma entra naquele momento.</p>
+      </div>
+
+      <div class="future-item">
+        <div class="future-icon">✓</div>
+        <p>Tratar fascite plantar, canelite e epicondilite com o mesmo método que você usa para lombar, e ver o paciente sair aliviado numa sessão.</p>
+      </div>
+
+      <div class="future-item">
+        <div class="future-icon">✓</div>
+        <p>Cobrar R$150, R$200, R$250 por sessão sem hesitar, porque você sabe o que está entregando e o paciente percebe.</p>
+      </div>
+
+      <div class="future-item">
+        <div class="future-icon">✓</div>
+        <p>Ter paciente que indica outras três pessoas porque saiu do consultório sentindo que foi atendida por uma especialista, não por alguém que tentou.</p>
+      </div>
+
+      <div class="future-close">
+        Isso não é promessa. É o que acontece quando você sai de catálogo de técnicas para um sistema de tratamento com raciocínio clínico.
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOBRA 5 — MECANISMO
+  ══════════════════════════════════════ -->
+  <section class="mecanismo">
+    <div class="container">
+      <h2 class="section-title">Por que a Liberação de Fáscia Profunda resolve o que outros métodos não conseguem</h2>
+
+      <p>A fáscia é uma rede de tecido conjuntivo que envolve cada músculo, cada osso, cada nervo do corpo. Quando essa rede fica tensionada, ela puxa estruturas, comprime nervos e cria dor em lugares que parecem não ter relação com a origem real do problema.</p>
+
+      <p>É por isso que tratar só o local da dor frequentemente não resolve.</p>
+
+      <p>A cefaleia pode vir da tensão na fáscia cervical. O bruxismo tem componente fascial na mandíbula e no pescoço. A ciatalgia pode ter origem no piriforme, não na coluna. A fascite plantar responde à liberação da cadeia posterior, não só da planta do pé.</p>
+
+      <p>O Método LMS de Liberação Miofascial Sem Sofrimento atua na fáscia profunda sem usar força excessiva. Isso permite liberar estruturas que métodos comuns não alcançam, sem causar desconforto no paciente, e com resultado perceptível em uma sessão.</p>
+
+      <div class="mec-box">Sem força. Sem sofrimento. Com resultado.</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOBRA 6 — AULAS
+  ══════════════════════════════════════ -->
+  <section class="aulas">
+    <div class="container">
+      <h2 class="section-title">O que você aprende nas 5 aulas</h2>
+
+      <div class="aula-card">
+        <span class="aula-tag">Aula 1 · Segunda 18/05 às 7h</span>
+        <h3>Por que a fáscia profunda é a origem das 14 dores que o seu paciente não conseguiu resolver em outro lugar</h3>
+        <p>Você entende o mecanismo que explica por que técnica sem avaliação não resolve. E descobre as 14 dores que a semana vai cobrir.</p>
+      </div>
+
+      <div class="aula-card">
+        <span class="aula-tag">Aula 2 · Terça 19/05 às 7h</span>
+        <h3>Lombalgia e ciatalgia: protocolo completo ao vivo para liberar as dores que mais travam o terapeuta</h3>
+        <p>As duas queixas mais comuns e mais difíceis. Protocolo de avaliação, sequência de técnicas e raciocínio clínico do início ao fim.</p>
+      </div>
+
+      <div class="aula-card">
+        <span class="aula-tag">Aula 3 · Quarta 20/05 às 7h</span>
+        <h3>Cefaleia, bruxismo e torcicolo: como liberar as dores da cabeça e do pescoço que ninguém associa com fáscia</h3>
+        <p>A aula que muda como você enxerga o que é possível. Muitos terapeutas não sabem que o Método LMS trata essas três queixas com eficiência. Você vai saber.</p>
+      </div>
+
+      <div class="aula-card">
+        <span class="aula-tag">Aula 4 · Quinta 21/05 às 7h</span>
+        <h3>Canelite, epicondilite e fascite plantar: tratando as dores de extremidade que todo terapeuta ignora</h3>
+        <p>Dores que parecem isoladas mas têm origem fascial. Protocolo prático e raciocínio clínico para cada uma.</p>
+      </div>
+
+      <div class="aula-card">
+        <span class="aula-tag">Aula 5 · Sexta 22/05 às 7h</span>
+        <h3>Como resolver as 14 queixas e ser referência na sua cidade</h3>
+        <p>Liga domínio técnico a posicionamento e valor cobrado por sessão. Você visualiza a vida depois do método completo e entende como se tornar a terapeuta de referência na sua região.</p>
+      </div>
+
+      <div class="bonus-card">
+        <span class="aula-tag">AULA BÔNUS · Domingo 25/05 às 20h</span>
+        <h3>Raciocínio clínico avançado e dor referida</h3>
+        <p>Conteúdo exclusivo para participantes ao vivo. Entenda como a dor referida engana o terapeuta e como o raciocínio clínico de fáscia profunda resolve o que a técnica isolada nunca vai conseguir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOBRA 7 — PROVA SOCIAL
+  ══════════════════════════════════════ -->
+  <section class="prova">
+    <div class="container">
+      <h2 class="section-title">O que os alunos do Método LMS falam</h2>
+
+      <div class="depo-placeholder">
+        [ Depoimento 1 — screenshot WhatsApp com resultado específico ]
+        <strong>Nome completo · Profissão · Cidade</strong>
+      </div>
+
+      <div class="depo-placeholder">
+        [ Depoimento 2 — screenshot WhatsApp com resultado específico ]
+        <strong>Nome completo · Profissão · Cidade</strong>
+      </div>
+
+      <div class="depo-placeholder">
+        [ Depoimento 3 — screenshot WhatsApp com resultado específico ]
+        <strong>Nome completo · Profissão · Cidade</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOBRA 8 — STACK DA OFERTA
+  ══════════════════════════════════════ -->
+  <section class="stack" id="inscricao">
+    <div class="container">
+      <h2 class="section-title">O que você recebe ao se inscrever</h2>
+
+      <div class="stack-row">
+        <div>
+          <div class="stack-name">5 aulas ao vivo com o Dr. Rafael Silva</div>
+          <div class="stack-desc">18/05 a 22/05 às 7h — protocolos para 14 dores com avaliação e raciocínio clínico demonstrados ao vivo</div>
+        </div>
+        <div class="stack-value">R$297</div>
+      </div>
+
+      <div class="stack-row">
+        <div>
+          <div class="stack-name">Acesso à gravação das aulas</div>
+          <div class="stack-desc">Assista quantas vezes quiser, no seu ritmo, depois do evento</div>
+        </div>
+        <div class="stack-value">R$97</div>
+      </div>
+
+      <div class="stack-row">
+        <div>
+          <div class="stack-name">Comunidade exclusiva com abertura de dúvidas sábado 8h</div>
+          <div class="stack-desc">Grupo de suporte com o Dr. Rafael para tirar dúvidas e discutir casos reais</div>
+        </div>
+        <div class="stack-value">R$47</div>
+      </div>
+
+      <div class="stack-row">
+        <div>
+          <div class="stack-name">Raciocínio clínico avançado só para participantes ao vivo</div>
+          <div class="stack-desc">Conteúdo exclusivo da aula bônus de domingo às 20h, sem acesso externo</div>
+        </div>
+        <div class="stack-value">R$97</div>
+      </div>
+
+      <div class="stack-total-box">
+        <span class="label">Valor total</span>
+        <span class="val">R$538</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOBRA 9 — PREÇO
+  ══════════════════════════════════════ -->
+  <section class="preco">
+    <div class="container">
+      <h2 class="section-title">Sua inscrição na Semana da Liberação Miofascial Sem Sofrimento</h2>
+
+      <div class="price-card">
+        <p class="price-old">De R$538</p>
+        <p class="price-new">R$37</p>
+        <p class="price-context">
+          Menos do que uma sessão do seu atendimento hoje.<br />
+          Em troca, você aprende a tratar 14 dores com raciocínio clínico e protocolo estruturado.
+          O valor que isso representa em cada sessão, ao longo de toda a sua carreira, não tem comparação.
+        </p>
+        <a href="#" class="cta-btn" style="display:block;width:100%;text-align:center;">
+          GARANTIR MINHA VAGA POR R$37
+        </a>
+        <p style="margin-top:14px;font-size:13px;color:#93c5fd;">🔒 Pagamento seguro Hotmart</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOBRA 10 — GARANTIA
+  ══════════════════════════════════════ -->
+  <section class="garantia">
+    <div class="container">
+      <div class="garantia-card">
+        <span class="garantia-icon">🛡️</span>
+        <h2>Garantia incondicional de 7 dias</h2>
+        <p>Se você participar das aulas e achar que não valeu o investimento, a gente devolve o seu dinheiro. Sem burocracia, sem pergunta. O risco é todo nosso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOBRA 11 — QUEM É O RAFAEL
+  ══════════════════════════════════════ -->
+  <section class="rafael">
+    <div class="container">
+      <div class="rafael-grid">
+        <div class="rafael-photo">
+          [ Foto do Dr. Rafael Silva ]
+        </div>
+        <div class="rafael-text">
+          <h2>Quem é o Dr. Rafael Silva</h2>
+          <p>Meu nome é Rafael Silva, sou fisioterapeuta desde 2011.</p>
+          <p>Já atendi mais de 5.000 pacientes com o Método LMS, enchi minha agenda e hoje ajudo outros fisioterapeutas a alcançarem o mesmo resultado.</p>
+          <p>Se eu consegui sair do plano de saúde pagando R$8/hora para faturar no mínimo R$10k/mês, você também pode.</p>
+          <p>Meu método é simples e objetivo, para você ter o máximo de resultado apenas utilizando suas mãos e uma maca.</p>
+
+          <div class="rafael-stats">
+            <div class="stat">
+              <span class="stat-num">+5.000</span>
+              <div class="stat-lbl">pacientes atendidos</div>
+            </div>
+            <div class="stat">
+              <span class="stat-num">+8.000</span>
+              <div class="stat-lbl">alunos formados</div>
+            </div>
+            <div class="stat">
+              <span class="stat-num">7</span>
+              <div class="stat-lbl">países</div>
+            </div>
+            <div class="stat">
+              <span class="stat-num">2011</span>
+              <div class="stat-lbl">fisioterapeuta</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOBRA 12 — QUALIFICAÇÃO
+  ══════════════════════════════════════ -->
+  <section class="qual">
+    <div class="container">
+      <h2 class="section-title">Essa semana é para você?</h2>
+
+      <div class="qual-grid">
+        <div class="qual-box sim">
+          <h3>É para você se...</h3>
+
+          <div class="qual-item">
+            <span class="ico">✅</span>
+            <span>Você é massoterapeuta, fisioterapeuta, quiropraxista ou profissional da área da saúde que trabalha com dor e quer tratar casos mais complexos com confiança.</span>
+          </div>
+
+          <div class="qual-item">
+            <span class="ico">✅</span>
+            <span>Você já conhece alguma técnica de liberação, mas sente que falta raciocínio clínico para saber por onde começar antes de tocar o paciente.</span>
+          </div>
+
+          <div class="qual-item">
+            <span class="ico">✅</span>
+            <span>Você quer cobrar mais por sessão e sabe que isso depende de entregar resultado que o paciente percebe imediatamente.</span>
+          </div>
+        </div>
+
+        <div class="qual-box nao">
+          <h3>Não é para você se...</h3>
+
+          <div class="qual-item">
+            <span class="ico">❌</span>
+            <span>Você está procurando mais um catálogo de técnicas sem entender o mecanismo por trás de cada uma.</span>
+          </div>
+
+          <div class="qual-item">
+            <span class="ico">❌</span>
+            <span>Você não está disposta a aplicar o que aprender nas suas sessões.</span>
+          </div>
+
+          <div class="qual-item">
+            <span class="ico">❌</span>
+            <span>Você prefere causar dor extrema na liberação miofascial.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CTA FINAL
+  ══════════════════════════════════════ -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>Garanta sua vaga agora</h2>
+      <p>
+        O raciocínio de liberação de fáscia profunda só é revelado dentro do evento.<br />
+        Quem entrar depois do início perde as aulas que já aconteceram.
+      </p>
+
+      <a href="#inscricao" class="cta-btn">QUERO MINHA VAGA — R$37</a>
+      <p style="margin-top:14px;font-size:13px;color:#93c5fd;">🔒 Pagamento seguro Hotmart</p>
+
+      <div class="event-chips">
+        <span>📅 18/05 a 22/05</span>
+        <span>🕖 Às 7h</span>
+        <span>📺 5 aulas ao vivo</span>
+        <span>🎁 Aula bônus domingo 25/05 às 20h</span>
+      </div>
+
+      <p class="warning-final">⚠️ 73% das vagas já foram reservadas. Não garanto que haverá vaga amanhã.</p>
+    </div>
+  </section>
+
+</body>
+</html>
