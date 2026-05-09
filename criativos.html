@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criativos Estáticos — Semana LMS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0b1739;
+      --blue:   #1e40af;
+      --orange: #f97316;
+      --yellow: #fbbf24;
+      --green:  #10b981;
+      --red:    #ef4444;
+      --white:  #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #060d1f;
+      color: var(--white);
+      padding: 48px 24px 80px;
+    }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      max-width: 1500px;
+      margin: 0 auto 56px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 26px;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+    .page-header p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── GRID ── */
+    .grid {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    @media (max-width: 1200px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 780px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 520px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── CREATIVE ITEM ── */
+    .ci {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ci-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .ci-label .n {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: white;
+      font-size: 10px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── CARD SHELL ── */
+    .card {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      background: var(--navy);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* ── META BOX ── */
+    .meta {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .ml {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 4px;
+    }
+    .mv {
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.55;
+    }
+    .meta-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* ========================================
+       C01 — DOR PRINCIPAL
+       Foto: by Adri42.jpg  (rosto sério, escuro)
+       Layout: foto full-bleed, texto overlay esquerdo
+    ======================================== */
+    .c01 {
+      background-image: url('FOTOS/by Adri42.jpg');
+      background-size: cover;
+      background-position: center top;
+    }
+    .c01 .ov {
+      position: absolute; inset: 0;
+      background: linear-gradient(110deg,
+        rgba(8,15,34,0.97) 0%,
+        rgba(8,15,34,0.88) 42%,
+        rgba(8,15,34,0.35) 68%,
+        rgba(8,15,34,0.0) 100%);
+    }
+    .c01 .cnt {
+      position: absolute; inset: 0;
+      padding: 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .ev-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(249,115,22,0.15);
+      border: 1px solid rgba(249,115,22,0.4);
+      border-radius: 3px;
+      padding: 3px 8px;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--orange);
+      width: fit-content;
+    }
+    .c01 .body {
+      max-width: 65%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 14% 0 10%;
+    }
+    .c01 .hl {
+      font-size: clamp(14px, 2.6vw, 22px);
+      font-weight: 900;
+      line-height: 1.2;
+      color: white;
+      margin-bottom: 10px;
+    }
+    .c01 .hl em { color: var(--orange); font-style: normal; }
+    .c01 .sb {
+      font-size: clamp(9px, 1.5vw, 13px);
+      color: rgba(255,255,255,0.58);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .c01 .strip {
+      background: rgba(249,115,22,0.1);
+      border: 1px solid rgba(249,115,22,0.25);
+      border-radius: 5px;
+      padding: 6px 10px;
+      width: fit-content;
+    }
+    .c01 .strip .nm {
+      font-size: clamp(8px, 1.2vw, 11px);
+      font-weight: 800;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .c01 .strip .tl {
+      font-size: clamp(7px, 1vw, 9px);
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ========================================
+       C02 — DESEJO PRINCIPAL
+       Foto: by Adri48.jpg  (sorrindo, porta clínica)
+       Layout: split — texto esq 52%, foto dir
+    ======================================== */
+    .c02 { display: flex; }
+    .c02 .tp {
+      flex: 0 0 54%;
+      background: var(--navy);
+      padding: 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 2;
+    }
+    .c02 .pp {
+      flex: 1;
+      background-image: url('FOTOS/by Adri48.jpg');
+      background-size: cover;
+      background-position: center top;
+      position: relative;
+    }
+    .c02 .pp::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, var(--navy) 0%, transparent 40%);
+      z-index: 1;
+    }
+    .c02 .tag {
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--yellow);
+    }
+    .c02 .hl {
+      font-size: clamp(14px, 2.6vw, 22px);
+      font-weight: 900;
+      line-height: 1.2;
+      color: white;
+    }
+    .c02 .hl span { color: var(--yellow); }
+    .c02 .sb {
+      font-size: clamp(9px, 1.4vw, 12px);
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+    .c02 .bot { display: flex; flex-direction: column; gap: 6px; }
+    .c02 .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-size: 9px;
+      font-weight: 900;
+      padding: 6px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+    .c02 .pl {
+      font-size: 9px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ========================================
+       C03 — PROVA SOCIAL
+       Foto: by Adri61.jpg (full body clínica) como bg sutil
+       Layout: centrado, número grande
+    ======================================== */
+    .c03 { background: var(--navy); }
+    .c03 .bg {
+      position: absolute; inset: 0;
+      background-image: url('FOTOS/by Adri61.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.10;
+    }
+    .c03 .ov {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center,
+        rgba(11,23,57,0.4) 0%,
+        rgba(11,23,57,0.92) 100%);
+    }
+    .c03 .cnt {
+      position: absolute; inset: 0;
+      padding: 8%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+    }
+    .green-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(16,185,129,0.12);
+      border: 1px solid rgba(16,185,129,0.35);
+      border-radius: 3px;
+      padding: 3px 10px;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+    .c03 .bignum {
+      font-size: clamp(44px, 9vw, 72px);
+      font-weight: 900;
+      color: white;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .c03 .bignum span { color: var(--green); }
+    .c03 .numlabel {
+      font-size: clamp(11px, 1.8vw, 15px);
+      font-weight: 700;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 4px;
+    }
+    .c03 .countries {
+      font-size: clamp(9px, 1.3vw, 11px);
+      color: rgba(255,255,255,0.38);
+    }
+    .c03 .tbox {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 7px;
+      padding: 12px 14px;
+      text-align: left;
+    }
+    .c03 .tbox .quote {
+      font-size: clamp(9px, 1.4vw, 12px);
+      color: rgba(255,255,255,0.65);
+      line-height: 1.5;
+      font-style: italic;
+      margin-bottom: 7px;
+    }
+    .c03 .tbox .author {
+      font-size: 9px;
+      color: var(--green);
+      font-weight: 700;
+    }
+    .c03 .brand {
+      font-size: 9px;
+      color: rgba(255,255,255,0.25);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ========================================
+       C04 — INIMIGO COMUM
+       Foto: by Adri38.jpg (braços cruzados, autoridade)
+       Layout: split — texto esq 55% com borda laranja, foto dir
+    ======================================== */
+    .c04 { display: flex; }
+    .c04 .tp {
+      flex: 0 0 56%;
+      background: var(--navy);
+      padding: 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .c04 .tp::after {
+      content: '';
+      position: absolute;
+      top: 12%;
+      right: 0;
+      width: 3px;
+      height: 76%;
+      background: var(--orange);
+      border-radius: 2px;
+    }
+    .c04 .pp {
+      flex: 1;
+      background-image: url('FOTOS/by Adri38.jpg');
+      background-size: cover;
+      background-position: center top;
+      position: relative;
+    }
+    .c04 .pp::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, var(--navy) 0%, transparent 45%);
+      z-index: 1;
+    }
+    .c04 .tag {
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+    .c04 .hl {
+      font-size: clamp(13px, 2.4vw, 20px);
+      font-weight: 900;
+      line-height: 1.25;
+      color: white;
+    }
+    .c04 .hl em { color: var(--orange); font-style: normal; }
+    .c04 .sb {
+      font-size: clamp(9px, 1.3vw, 11px);
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+    .c04 .bot { display: flex; flex-direction: column; gap: 5px; }
+    .c04 .mtag {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 9px;
+      font-weight: 800;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .c04 .mtag::before {
+      content: '';
+      width: 14px; height: 2px;
+      background: var(--orange);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .c04 .ctatxt {
+      font-size: 9px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ========================================
+       C05 — URGÊNCIA / DATA
+       Foto: Design sem nome.jpg (braços cruzados, janela)
+       Layout: full bleed, overlay escuro forte
+    ======================================== */
+    .c05 {
+      background-image: url('FOTOS/Design sem nome.jpg');
+      background-size: cover;
+      background-position: center top;
+    }
+    .c05 .ov {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg,
+        rgba(8,15,34,0.78) 0%,
+        rgba(8,15,34,0.95) 55%,
+        rgba(8,15,34,0.98) 100%);
+    }
+    .c05 .cnt {
+      position: absolute; inset: 0;
+      padding: 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .urg-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(249,115,22,0.15);
+      border: 1.5px solid rgba(249,115,22,0.5);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      width: fit-content;
+    }
+    .urg-badge .dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--orange);
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+    .c05 .mid { text-align: center; }
+    .c05 .evname {
+      font-size: clamp(8px, 1.2vw, 10px);
+      font-weight: 700;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .c05 .datehl {
+      font-size: clamp(20px, 4vw, 34px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: white;
+      margin-bottom: 8px;
+    }
+    .c05 .datehl span { color: var(--orange); }
+    .c05 .tagl {
+      font-size: clamp(9px, 1.4vw, 12px);
+      color: rgba(255,255,255,0.48);
+      line-height: 1.5;
+    }
+    .c05 .bot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .c05 .pb { display: flex; flex-direction: column; }
+    .c05 .plbl {
+      font-size: 8px;
+      color: rgba(255,255,255,0.35);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .c05 .prc {
+      font-size: clamp(22px, 4.5vw, 36px);
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1.1;
+    }
+    .c05 .prc small { font-size: 13px; font-weight: 700; }
+    .c05 .vb {
+      background: rgba(239,68,68,0.12);
+      border: 1.5px solid rgba(239,68,68,0.35);
+      border-radius: 6px;
+      padding: 8px 12px;
+      text-align: center;
+    }
+    .c05 .vlbl {
+      font-size: 8px;
+      color: rgba(252,165,165,0.6);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .c05 .vtxt {
+      font-size: clamp(11px, 1.8vw, 14px);
+      color: #fca5a5;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>Criativos Estáticos — Meta Ads</h1>
+    <p>Semana da Liberação Miofascial Sem Sofrimento &nbsp;&#183;&nbsp; Dr. Rafael Silva &nbsp;&#183;&nbsp; Formato 1080 x 1080</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- ─────────────────────────────
+         C01 — DOR PRINCIPAL
+    ───────────────────────────── -->
+    <div class="ci">
+      <div class="ci-label"><span class="n">1</span> Dor Principal</div>
+
+      <div class="card c01">
+        <div class="ov"></div>
+        <div class="cnt">
+          <span class="ev-badge">Semana LMS</span>
+          <div class="body">
+            <div class="hl">
+              Você trata, alivia...<br />e o paciente volta com<br /><em>a mesma dor</em> semana que vem.
+            </div>
+            <div class="sb">
+              O problema não é a técnica.<br />É que ninguém te ensinou a chegar na origem.
+            </div>
+          </div>
+          <div class="strip">
+            <div class="nm">Dr. Rafael Silva</div>
+            <div class="tl">Fisioterapeuta &amp; Osteopata</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meta">
+        <div>
+          <div class="ml">Legenda</div>
+          <div class="mv">Você aplica a técnica, alivia na sessão — e na semana seguinte o paciente volta com a mesma dor.<br><br>Não é falta de habilidade. É que a maioria dos cursos ensina a técnica. Ninguém ensina a encontrar a origem.<br><br>Na Semana da Liberação Miofascial eu mostro como usar o GPS Miofascial para identificar e tratar a causa raiz de qualquer dor musculoesquelética — sem força, sem sofrimento, com resultado de sessão.<br><br>🔗 Garanta sua vaga por R$37.</div>
+        </div>
+        <div class="meta-divider"></div>
+        <div>
+          <div class="ml">Público</div>
+          <div class="mv">Interesse: fisioterapia, massoterapia, quiropraxia, terapia manual. Faixa 25–45 anos. Advantage+ Audiences ativo. Brasil.</div>
+        </div>
+        <div class="meta-divider"></div>
+        <div>
+          <div class="ml">Objetivo</div>
+          <div class="mv">Conversões — Purchase (ingresso R$37). Testar como Creative primário no conjunto de Tráfego Frio.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────
+         C02 — DESEJO PRINCIPAL
+    ───────────────────────────── -->
+    <div class="ci">
+      <div class="ci-label"><span class="n">2</span> Desejo Principal</div>
+
+      <div class="card c02">
+        <div class="tp">
+          <div class="tag">Imagine isso</div>
+          <div>
+            <div class="hl">Agenda cheia.<br /><span>R$300</span> por sessão.<br />Paciente que volta.</div>
+            <div class="sb">Isso acontece quando você domina o raciocínio clínico e trata dores que outros terapeutas não conseguem.</div>
+          </div>
+          <div class="bot">
+            <div class="cta">&#9658; Quero aprender</div>
+            <div class="pl">Semana completa por R$37</div>
+          </div>
+        </div>
+        <div class="pp"></div>
+      </div>
+
+      <div class="meta">
+        <div>
+          <div class="ml">Legenda</div>
+          <div class="mv">Todo terapeuta quer isso: agenda cheia, paciente fidelizado, sessão valendo mais.<br><br>Mas a maioria fica no mesmo patamar porque não tem raciocínio clínico para lidar com os casos mais complexos.<br><br>Quando você aprende a tratar a origem da dor com liberação de fáscia profunda — o paciente sente a diferença na hora, volta, indica, e você vira referência na sua região.<br><br>Semana da Liberação Miofascial Sem Sofrimento. Começa em [DATA].<br><br>🔗 Garanta sua vaga — R$37.</div>
+        </div>
+        <div class="meta-divider"></div>
+        <div>
+          <div class="ml">Público</div>
+          <div class="mv">Lookalike 1–3% de compradores anteriores. Retargeting de visitantes da página (7 dias). Advantage+ com seed da lista de clientes.</div>
+        </div>
+        <div class="meta-divider"></div>
+        <div>
+          <div class="ml">Objetivo</div>
+          <div class="mv">Conversões — Purchase. Testar também Traffic para alimentar retargeting posterior.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────
+         C03 — PROVA SOCIAL
+    ───────────────────────────── -->
+    <div class="ci">
+      <div class="ci-label"><span class="n">3</span> Prova Social</div>
+
+      <div class="card c03">
+        <div class="bg"></div>
+        <div class="ov"></div>
+        <div class="cnt">
+          <span class="green-badge">Resultados reais</span>
+          <div>
+            <div class="bignum"><span>+8.000</span></div>
+            <div class="numlabel">terapeutas já aplicam o método</div>
+            <div class="countries">Em 7 países &mdash; sem força, sem sofrimento</div>
+          </div>
+          <div class="tbox">
+            <div class="quote">"[Depoimento real do aluno — resultado específico que ele alcançou com o método LMS em poucos atendimentos]"</div>
+            <div class="author">Nome do aluno &mdash; Cidade, Estado</div>
+          </div>
+          <div class="brand">Dr. Rafael Silva &mdash; Método LMS</div>
+        </div>
+      </div>
+
+      <div class="meta">
+        <div>
+          <div class="ml">Legenda</div>
+          <div class="mv">Mais de 8.000 terapeutas em 7 países já mudaram a forma de tratar dores usando o Método LMS.<br><br>Sem força excessiva. Sem machucar o paciente. Com resultado que o paciente percebe na sessão e conta pra todo mundo.<br><br>[Inserir depoimento real aqui]<br><br>Essa semana você pode fazer parte disso.<br><br>Semana da Liberação Miofascial Sem Sofrimento — R$37 para uma semana que muda seu atendimento.<br><br>🔗 Link no primeiro comentário.</div>
+        </div>
+        <div class="meta-divider"></div>
+        <div>
+          <div class="ml">Público</div>
+          <div class="mv">Tráfego frio amplo — interesse saúde, terapia, bem-estar. Advantage+ Audiences. Testar 25–34 anos separado de 35–50 anos para comparar CPL.</div>
+        </div>
+        <div class="meta-divider"></div>
+        <div>
+          <div class="ml">Objetivo</div>
+          <div class="mv">Conversões — Purchase. Forte também para Retargeting de quem assistiu vídeos do perfil do Dr. Rafael 75%+.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────
+         C04 — INIMIGO COMUM
+    ───────────────────────────── -->
+    <div class="ci">
+      <div class="ci-label"><span class="n">4</span> Inimigo Comum</div>
+
+      <div class="card c04">
+        <div class="tp">
+          <div>
+            <div class="tag">A verdade que ninguém fala</div>
+            <div class="hl">A faculdade te ensinou anatomia.<br /><em>Ninguém te ensinou</em> a tratar dor.</div>
+            <div class="sb">Não é culpa sua. O sistema de formação foi feito assim. Mas dá pra mudar agora.</div>
+          </div>
+          <div class="bot">
+            <div class="mtag">Método LMS</div>
+            <div class="ctatxt">Semana da Liberação Miofascial &mdash; R$37</div>
+          </div>
+        </div>
+        <div class="pp"></div>
+      </div>
+
+      <div class="meta">
+        <div>
+          <div class="ml">Legenda</div>
+          <div class="mv">A faculdade te ensinou anatomia, fisiologia, biomecânica.<br><br>Mas quando o paciente chega com lombalgia, ciatalgia ou torcicolo — você precisa saber onde está a origem daquela dor. E aí o currículo não ajuda.<br><br>Não é culpa sua. O sistema de formação foi feito pra diagnosticar, não pra tratar dor miofascial com precisão.<br><br>Na Semana da Liberação Miofascial eu ensino o GPS Miofascial: como pensar antes de tratar, como encontrar a origem da dor em qualquer paciente.<br><br>🔗 Garanta sua vaga — R$37.</div>
+        </div>
+        <div class="meta-divider"></div>
+        <div>
+          <div class="ml">Público</div>
+          <div class="mv">Fisioterapeutas formados há 2+ anos, massoterapeutas, quiropraxistas. Tráfego frio. Retargeting de quem assistiu vídeos do perfil do Dr. Rafael (30 dias).</div>
+        </div>
+        <div class="meta-divider"></div>
+        <div>
+          <div class="ml">Objetivo</div>
+          <div class="mv">Conversões — Purchase ou Traffic. Ângulo contrarian forte — testar criativo em vídeo com a mesma mensagem para comparar CTR e CPL.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────
+         C05 — URGÊNCIA / DATA
+    ───────────────────────────── -->
+    <div class="ci">
+      <div class="ci-label"><span class="n">5</span> Urgência / Data</div>
+
+      <div class="card c05">
+        <div class="ov"></div>
+        <div class="cnt">
+          <div class="urg-badge"><span class="dot"></span> Vagas Limitadas</div>
+          <div class="mid">
+            <div class="evname">Semana da Liberação Miofascial</div>
+            <div class="datehl">Começa em<br /><span>[DATA DO EVENTO]</span></div>
+            <div class="tagl">5 aulas ao vivo com o Dr. Rafael Silva<br />Trate 14 dores com liberação de fáscia profunda</div>
+          </div>
+          <div class="bot">
+            <div class="pb">
+              <div class="plbl">Acesso completo por</div>
+              <div class="prc"><small>R$</small>37</div>
+            </div>
+            <div class="vb">
+              <div class="vlbl">Atenção</div>
+              <div class="vtxt">Últimas vagas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meta">
+        <div>
+          <div class="ml">Legenda</div>
+          <div class="mv">&#9888;&#65039; A Semana da Liberação Miofascial Sem Sofrimento começa em [DATA].<br><br>São 5 aulas ao vivo com o Dr. Rafael Silva onde você aprende a tratar 14 dores musculoesqueléticas usando liberação de fáscia profunda — sem força, sem sofrimento, com resultado que o paciente sente na sessão.<br><br>As vagas são limitadas. Quando fechar, fecha.<br><br>Acesso completo por R$37.<br>🔗 Garante agora antes de esgotar.</div>
+        </div>
+        <div class="meta-divider"></div>
+        <div>
+          <div class="ml">Público</div>
+          <div class="mv">Retargeting quente: visitou página (7 dias), engajou no perfil (30 dias), assistiu vídeo 50%+. Lookalike 1% de compradores. Ativar apenas nos últimos 48–72h antes do fechamento.</div>
+        </div>
+        <div class="meta-divider"></div>
+        <div>
+          <div class="ml">Objetivo</div>
+          <div class="mv">Conversões — Purchase. Budget aumentado nessa janela final. Não rodar como tráfego frio — é criativo de fechamento.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /grid -->
+
+</body>
+</html>
